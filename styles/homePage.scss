@@ -1,3 +1,15 @@
-body{
-    color: $color;
+@include allFont;
+
+*{
+    @include defaultLayout;
+}
+
+
+
+h1{
+    font-family: $titleLogoFont;
+    color: $primaryColor;
+}
+p{
+    font-family: $textFont;
 }

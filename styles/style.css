@@ -1,5 +1,19 @@
-body {
-  color: #e9d313;
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;500;700&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-family: "Shrikhand", cursive;
+  color: #9356DC;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
 }
 
 /*# sourceMappingURL=style.css.map */
