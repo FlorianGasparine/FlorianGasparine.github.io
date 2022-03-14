@@ -3,17 +3,259 @@
 * {
   margin: 0;
   padding: 0;
+  object-fit: cover;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
-h1 {
-  font-family: "Shrikhand", cursive;
-  color: #9356DC;
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
 }
 
-p {
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  position: relative;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.2);
+}
+header h1 {
+  font-family: "Shrikhand", cursive;
+  color: black;
+}
+
+.section__location {
+  height: 3%;
+  text-align: center;
+  background-color: #f3f3f3;
+}
+.section__location--font {
+  padding: 20px;
   font-family: "Roboto", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+}
+.section__location #section__location--position {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section__presentation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  gap: 17px;
+  background-color: #fafafa;
+}
+.section__presentation--titlePosition {
+  max-width: 250px;
+  margin-top: 40px;
+  text-align: center;
+}
+.section__presentation--paragraphePosition {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.568);
+}
+
+.section--presentation--button {
+  padding: 15px 25px;
+  margin: 25px 0px 60px 0px;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+}
+
+.section__functioning {
+  margin: 45px 30px 50px 30px;
+}
+.section__functioning--title {
+  margin-bottom: 30px;
+}
+.section__functioning--font {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+#section__functioning--card1 {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: auto;
+  margin-bottom: 25px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  background-color: #f6f6f6;
+}
+#section__functioning--card1 ::before {
+  content: "1";
+  position: absolute;
+  left: -14px;
+  top: 17px;
+  padding: 6px 10px;
+  border-radius: 20px;
+  color: white;
+  background-color: #9356DC;
+}
+
+#section__functioning--card2 {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: auto;
+  margin-bottom: 25px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  background-color: #f6f6f6;
+}
+#section__functioning--card2 ::before {
+  content: "2";
+  position: absolute;
+  left: -14px;
+  top: 17px;
+  padding: 6px 10px;
+  border-radius: 20px;
+  color: white;
+  background-color: #9356DC;
+}
+
+#section__functioning--card3 {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: auto;
+  margin-bottom: 25px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  background-color: #f6f6f6;
+}
+#section__functioning--card3 ::before {
+  content: "3";
+  position: absolute;
+  left: -14px;
+  top: 17px;
+  padding: 6px 10px;
+  border-radius: 20px;
+  color: white;
+  background-color: #9356DC;
+}
+
+.fa-mobile-alt:before {
+  font-size: 20px;
+  margin: 0px 31px 0px 18px;
+  color: rgba(0, 0, 0, 0.568);
+}
+
+.fa-list:before {
+  font-size: 20px;
+  margin: 0px 24px 0px 18px;
+  color: rgba(0, 0, 0, 0.568);
+}
+
+.fa-store::before {
+  font-size: 20px;
+  margin: 0px 20px 0px 18px;
+  color: rgba(0, 0, 0, 0.568);
+}
+
+.section__restaurants {
+  background-color: #f3f3f3;
+  padding-bottom: 40px;
+}
+.section__restaurants--title {
+  padding: 40px 0px 15px 17px;
+}
+
+.card {
+  width: 91%;
+  height: 200px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  background-color: #f3f3f3;
+}
+.card__image {
+  border-radius: 20px 20px 0px 0px;
+  width: 100%;
+  height: 60%;
+}
+.card__texte {
+  margin-top: -5px;
+  padding: 15px;
+  background-color: white;
+  border-radius: 0px 0px 20px 20px;
+}
+.card .card__text--fontSize {
+  font-weight: 300;
+}
+
+.card--beforeNew {
+  position: relative;
+  width: 91%;
+  height: 200px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  background-color: #f3f3f3;
+}
+.card--beforeNew::before {
+  content: "Nouveau";
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  padding: 5px 10px;
+  color: #1b6150;
+  background-color: #99E2D0;
+}
+
+.footer {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 8px;
+  padding: 25px;
+  color: white;
+  background-color: #353535;
+}
+.footer__title {
+  margin-bottom: 10px;
+  font-family: "Shrikhand", cursive;
+  font-weight: 200;
+  color: white;
+}
+.footer .footer__title--Font {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+.footer .fa-utensils:before {
+  content: "\f2e7";
+  margin-right: 10px;
+}
+.footer .fa-hands-helping:before {
+  content: "\f4c4";
+  margin-right: 3px;
 }
 
 /*# sourceMappingURL=style.css.map */

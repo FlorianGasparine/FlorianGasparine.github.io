@@ -1,6 +1,7 @@
 @mixin defaultLayout {
     margin: 0;  
     padding: 0;
+    object-fit: cover;
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
@@ -9,3 +10,32 @@
     @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;500;700&family=Shrikhand&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 }
+
+@mixin alignFlexBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Layout Functioning Card
+    // For element from FontAwesome
+    @mixin layoutFunctioningCard{
+        position: relative;
+        width: auto;
+        margin-bottom: 25px;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.30);
+        cursor: pointer;
+        background-color: #f6f6f6;
+    }
+        // For element Before
+        @mixin beforeElementFunctioningCard {
+            position: absolute;
+            left: -14px;
+            top: 17px;
+            padding: 6px 10px;
+            border-radius: 20px;
+            color: white;
+            background-color: $primaryColor; 
+        }
