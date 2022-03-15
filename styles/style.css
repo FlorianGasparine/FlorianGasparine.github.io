@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;500;700&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;500;700&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -67,7 +69,7 @@ header h1 {
   color: rgba(0, 0, 0, 0.568);
 }
 
-.section--presentation--button {
+.button__default {
   padding: 15px 25px;
   margin: 25px 0px 60px 0px;
   border: none;
@@ -262,6 +264,130 @@ header h1 {
 .footer .fa-hands-helping:before {
   content: "\f4c4";
   margin-right: 3px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  object-fit: cover;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  position: relative;
+}
+header header {
+  position: relative;
+  padding: 20px;
+  text-align: center;
+}
+header header h1 {
+  font-family: "Shrikhand", cursive;
+  color: black;
+}
+header #header__arrow--position {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  font-size: 23px;
+}
+
+.sectionFood__image--Size {
+  width: 100%;
+  height: 380px;
+}
+
+.plate {
+  position: relative;
+  margin-top: -90px;
+  padding-bottom: 20px;
+  margin-bottom: 0px;
+  border-radius: 50px 50px 0px 0px;
+  background-color: #F2F2F2;
+}
+.plate__title {
+  font-family: "Shrikhand", cursive;
+  padding: 30px;
+  font-size: 28px;
+}
+
+.containerEntrance {
+  margin-bottom: 15px;
+}
+.containerEntrance__title {
+  position: relative;
+  padding: 10px;
+  padding-left: 18px;
+  font-weight: 300;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+.containerEntrance__title::after {
+  content: "";
+  position: absolute;
+  top: 33px;
+  left: 18px;
+  width: 45px;
+  height: 4px;
+  background-color: #99E2D0;
+  z-index: 30;
+}
+.containerEntrance__allCard {
+  margin-bottom: -30px;
+  padding-bottom: 30px;
+}
+
+.cardMenu {
+  width: 94%;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  padding: 13px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+  background-color: white;
+}
+.cardMenu--flexBoxPrice {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4px;
+  margin-right: 6px;
+  font-weight: 500;
+}
+.cardMenu .cardMenu--fontTitlecard > h5:nth-child(1) {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.button__order {
+  padding: 15px 25px;
+  margin: 25px 0px 60px 0px;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+  display: block;
+  margin: 35px auto;
+  margin-top: 50px;
+  padding: 18px 50px;
 }
 
 /*# sourceMappingURL=style.css.map */

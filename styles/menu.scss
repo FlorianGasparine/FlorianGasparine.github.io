@@ -1,0 +1,105 @@
+@include allRules;
+
+header{
+    @include header;
+    position: relative;
+
+    #header__arrow--position{
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        font-size: 23px;
+    }
+
+}
+
+
+
+
+// Image Section
+.sectionFood__image--Size{
+    width: 100%;
+    height: 380px;
+}
+
+
+
+// Plate Section
+.plate{
+    position: relative;
+    margin-top: -90px;
+    padding-bottom: 20px;
+    margin-bottom: 0px;
+    border-radius: 50px 50px 0px 0px;
+    background-color:#F2F2F2;
+
+    &__title{
+        font-family: $titleLogoFont;
+        padding: 30px;
+        font-size: 28px;
+    }
+}
+
+.containerEntrance{
+
+    margin-bottom: 15px;
+
+        &__title{
+            position: relative;
+            padding: 10px;
+            padding-left: 18px;
+            font-weight: 300;
+            font-size: 16px;
+            margin-bottom: 15px;
+
+            &::after{
+                content:"";
+                position: absolute;
+                top: 33px;
+                left: 18px;
+                width: 45px;
+                height: 4px;
+                background-color: $tertiaryColor;
+                z-index: 30;
+            }
+        }
+
+            &__allCard{
+                margin-bottom: -30px;
+                padding-bottom: 30px;
+            }
+}
+
+.cardMenu{
+    width: 94%;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    padding: 13px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    background-color: white;
+
+        &--flexBoxPrice{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 4px;
+            margin-right: 6px;
+            font-weight: 500;
+        }
+        
+            .cardMenu--fontTitlecard > h5:nth-child(1) {
+            font-weight: 300;
+            font-size: 14px;
+        }
+        
+}
+
+.button__order{
+    @include defaultButton;
+    display: block;
+    margin: 35px auto;
+    margin-top: 50px;
+    padding: 18px 50px;
+}
