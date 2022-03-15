@@ -82,10 +82,13 @@ header h1 {
 }
 
 .section__functioning {
-  margin: 45px 30px 50px 30px;
+  margin: 45px 30px 50px 17px;
 }
 .section__functioning--title {
   margin-bottom: 30px;
+}
+.section__functioning__AllCard {
+  margin-left: 15px;
 }
 .section__functioning--font {
   font-family: "Roboto", sans-serif;
@@ -190,16 +193,18 @@ header h1 {
 
 .card {
   width: 91%;
-  height: 200px;
+  height: 177px;
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  margin-left: 18px;
   border-radius: 20px;
   background-color: #f3f3f3;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
 }
 .card__image {
   border-radius: 20px 20px 0px 0px;
   width: 100%;
-  height: 60%;
+  height: 65%;
 }
 .card__texte {
   margin-top: -5px;
@@ -214,9 +219,10 @@ header h1 {
 .card--beforeNew {
   position: relative;
   width: 91%;
-  height: 200px;
+  height: 177px;
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  margin-left: 18px;
   border-radius: 20px;
   background-color: #f3f3f3;
 }
