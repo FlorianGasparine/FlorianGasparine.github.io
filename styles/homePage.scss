@@ -219,51 +219,37 @@ header{
         }
 }
 
-
-// .iconeHeart{
-//     bottom: 22px;
-//     right: 22px;
-//     font-size: 27px;
-    
-
-//         &--color{
-//             background: -webkit-gradient(linear, left top, left bottom, from(#ff79da ), to(#9356dc));
-//             -webkit-background-clip: text;
-//             -webkit-text-fill-color: transparent;
-            
-//             &:hover{
-//                 opacity: 1;
-//             }          
-//     }
-// }
-
-.heart{
-    display: flex;
-    position: relative;
-    bottom: 26px;
-    left: 368px;
+heart{
+    display: block;
 }
+
 .iconeHeart{
     position: absolute;
+    top: 25px;
+    right: 36px;
     font-size: 27px;
-    opacity: 1;
 }
 
 .iconeHeart-background{
-    font-size: 27px;    
-    background: -webkit-gradient(linear, left top, left bottom, from(#ff79da ), to(#9356dc));    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    position: absolute;
+    top: 24px;
+    right: 34px;
+    font-size: 30px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ff79da ), to(#9356dc));
     -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+    font-weight: bold;
     opacity: 0;
 }
 
 .iconeHeart-background:hover{
     opacity: 1;
-    transform: scale();
+    transition: ease-in-out 500ms;
 }
-
-
-
+.iconeHeart-background:active{
+    opacity: 1;
+    transition: ease-in-out 500ms;
+}
 
 
 
