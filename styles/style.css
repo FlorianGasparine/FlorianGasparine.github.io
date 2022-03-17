@@ -256,10 +256,6 @@ header {
   background-color: #99E2D0;
 }
 
-heart {
-  display: block;
-}
-
 .iconeHeart {
   position: absolute;
   top: 25px;
