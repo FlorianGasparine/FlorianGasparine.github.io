@@ -219,33 +219,31 @@ header{
         }
 }
 
+.heart {
+    color: black;
+    &:hover {
+      transition: 200ms;
+      background:linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+      background:-webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color:transparent;
+    }
+}
+
+.iconeHeart-background{
+    position: absolute;
+    top: 25px;
+    right: 36px;
+    font-size: 27px;
+-webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+}
 
 .iconeHeart{
     position: absolute;
     top: 25px;
     right: 36px;
     font-size: 27px;
-}
-
-.iconeHeart-background{
-    position: absolute;
-    top: 24px;
-    right: 34px;
-    font-size: 30px;
-    background: -webkit-gradient(linear, left top, left bottom, from(#ff79da ), to(#9356dc));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color:transparent;
-    font-weight: bold;
-    opacity: 0;
-}
-
-.iconeHeart-background:hover{
-    opacity: 1;
-    transition: ease-in-out 500ms;
-}
-.iconeHeart-background:active{
-    opacity: 1;
-    transition: ease-in-out 500ms;
 }
 
 
