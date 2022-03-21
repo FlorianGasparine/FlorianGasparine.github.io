@@ -219,32 +219,43 @@ header{
         }
 }
 
-.heart {
-    color: black;
-    &:hover {
-      transition: 200ms;
-      background:linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-      background:-webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color:transparent;
-    }
+
+
+.icone__heart{
+    position: absolute;
+    top: 22px;
+    right: 25px;
+    font-size: 27px;
+
+        &--bg{
+            position: absolute;
+            top: 22px;
+            right: 25px;
+            font-size: 27px; 
+            background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+            background: -webkit-linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity: 0;
+
+                &:hover,&:active{
+                    opacity: 1;
+                    transform: scale(1.14);
+                    transition: ease-out 300ms;
+                }
+        }
 }
 
-.iconeHeart-background{
-    position: absolute;
-    top: 25px;
-    right: 36px;
-    font-size: 27px;
--webkit-background-clip: text;
-    -webkit-text-fill-color:transparent;
-}
 
-.iconeHeart{
-    position: absolute;
-    top: 25px;
-    right: 36px;
-    font-size: 27px;
-}
+
+
+ 
+
+
+
+
+
+
 
 
 
