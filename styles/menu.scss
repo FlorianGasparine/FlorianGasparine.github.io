@@ -93,51 +93,105 @@ header{
     flex-grow: 1;
     text-overflow: ellipsis;
     overflow: hidden;
-}
-
-.cardMenu__Subtitle{
-    font-weight: bold;
+    white-space: nowrap; 
 }
 
 .cardMenu__fontTitlecard{
+    font-weight: bold;
+}
+
+.cardMenu__Subtitle h5{
     font-weight: 300;
     font-size: 14px;
 }
 
+.cardMenu__titles h5 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.cardMenu__fontTitlecard h4{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.cardMenu:hover .container__animation {
+    margin-right: 45px;
+    transition: ease-out 700ms;
+    
+    .animation__check{
+    color: white;
+    font-size: 25px;
+    transform: rotate(180deg);
+    animation: rotation ease-in 700ms both;
+    -webkit-animation: rotation ease-in 700ms both;
+}
+}
+    @keyframes rotation{
+        100%{
+            transform: rotate(360deg);     
+        }
+    }
+
 .cardMenu--flexBoxPrice{
     display: flex;
     align-items: flex-end;
+    padding-right: 15px;
 }
-.containerEntrance__animation--bg{
+
+.container__animation{
+    display: flex;
+    position: relative;
+    margin-right: -13px;
+}
+
+.container__animation--iconeAndBg{
     position: absolute;
     right: 0px;
     top: 0;
-    margin-right: -46px;
+    margin-right: -58px;
+    margin-bottom: 0px;
+    margin-top: -13px;
+    margin-left: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%; 
-    padding: 0px 15px;
+    width: 58px;
+    height: 62px; 
+    padding: 0px 19px;
     border-radius: 0 15px 15px 0;
     background: $tertiaryColor;
 }
 
-.cardMenu:hover .containerEntrance__animation--bg {
-    transform:translateX(-45px);
-    transition: 700ms;
+.card__firstApparition--opacity{
+    animation: apparition 500ms both;
+    -webkit-animation: apparition 500ms both;
 }
-.cardMenu:hover .cardMenu--flexBoxPrice{
-    transform:translateX(-45px);
-    transition: 700ms;
+.card__secondApparition--opacity{
+    animation: apparition 900ms both;
+    -webkit-animation: apparition 500ms both;
+}
+.card__thirdApparition--opacity{
+    animation: apparition 1200ms both;
+    -webkit-animation: apparition 500ms both;
 }
 
 
-
-
-
-.animation__check{
-    color: white;
+@keyframes apparition {
+    0%{
+        opacity: 0;
+        transform: translateY(10%);
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
 }
+
 
 
 
@@ -177,4 +231,58 @@ header{
                     transition: ease-out 300ms;
                 }
         }
+}
+
+// main, header{
+//     opacity: 0;
+//     animation: opacityBody;
+// }
+// @keyframes opacityBody {
+//     100%{
+//         opacity: 1;
+//     }
+// }
+
+.container__loader{
+    position: absolute;
+    @include alignFlexBox;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    transition: opacity 1s ease-in-out;
+}
+
+.dot1{
+    margin: 0 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: $primaryColor;
+    animation: loader infinite 900ms ease-in alternate-reverse;      
+}
+
+.dot2{
+        margin: 0 8 px;
+        width: 50px;
+        height: 50px;
+        border-radius: 40%;
+        background-color: $secondaryColor;
+        animation: loader infinite 900ms ease-out alternate-reverse;
+        animation-delay: 100ms;
+    } 
+
+    .dot3{
+            margin: 0 10px;
+            width: 60px;
+            height: 60px;
+            border-radius: 30%;
+            background-color: $tertiaryColor;
+            animation: loader infinite 900ms ease-out alternate-reverse;
+            animation-delay: 200ms;
+        }
+
+@keyframes loader {
+    100%{
+        transform: translateY(-10px);
+    }
 }
