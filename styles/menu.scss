@@ -170,11 +170,11 @@ header{
 }
 .card__secondApparition--opacity{
     animation: apparition 900ms both;
-    -webkit-animation: apparition 500ms both;
+    -webkit-animation: apparition 900ms both;
 }
 .card__thirdApparition--opacity{
     animation: apparition 1200ms both;
-    -webkit-animation: apparition 500ms both;
+    -webkit-animation: apparition 1200ms both;
 }
 
 
@@ -225,23 +225,14 @@ header{
             -webkit-text-fill-color: transparent;
             opacity: 0;
 
-                &:hover,&:active{
-                    opacity: 1;
-                    transform: scale(1.14);
-                    transition: ease-out 300ms;
-                }
+            &:hover,
+            &:active{
+                opacity: 1;
+                transform: scale(1.14);
+                transition: ease-out 300ms;
+            }
         }
 }
-
-// main, header{
-//     opacity: 0;
-//     animation: opacityBody;
-// }
-// @keyframes opacityBody {
-//     100%{
-//         opacity: 1;
-//     }
-// }
 
 .container__loader{
     position: absolute;
@@ -249,7 +240,28 @@ header{
     width: 100vw;
     height: 100vh;
     background-color: white;
-    transition: opacity 1s ease-in-out;
+    animation: scaleLoader ease-in-out 2s both;
+    animation-iteration-count: 1;
+    z-index: 9999;
+}
+
+@keyframes scaleLoader {
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+    }
+    99%{
+        transform: scale(1);
+        opacity: 0.1;
+        
+    }
+    100%{
+        transform: scale(0);
+        opacity: 0;
+    }
 }
 
 .dot1{
@@ -262,24 +274,24 @@ header{
 }
 
 .dot2{
-        margin: 0 8 px;
-        width: 50px;
-        height: 50px;
-        border-radius: 40%;
-        background-color: $secondaryColor;
-        animation: loader infinite 900ms ease-out alternate-reverse;
-        animation-delay: 100ms;
+    margin: 0 8 px;
+    width: 50px;
+    height: 50px;
+    border-radius: 40%;
+    background-color: $secondaryColor;
+    animation: loader infinite 900ms ease-out alternate-reverse;
+    animation-delay: 100ms;
     } 
 
-    .dot3{
-            margin: 0 10px;
-            width: 60px;
-            height: 60px;
-            border-radius: 30%;
-            background-color: $tertiaryColor;
-            animation: loader infinite 900ms ease-out alternate-reverse;
-            animation-delay: 200ms;
-        }
+.dot3{
+    margin: 0 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 30%;
+    background-color: $tertiaryColor;
+    animation: loader infinite 900ms ease-out alternate-reverse;
+    animation-delay: 200ms;
+}
 
 @keyframes loader {
     100%{
