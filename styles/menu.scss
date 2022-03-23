@@ -235,7 +235,7 @@ header{
 }
 
 .container__loader{
-    position: absolute;
+    position: fixed;
     @include alignFlexBox;
     width: 100vw;
     height: 100vh;
