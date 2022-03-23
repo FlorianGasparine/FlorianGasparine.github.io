@@ -57,7 +57,6 @@ header{
 }
 
 .button__default{
-    
     @include defaultButton;
     position: relative;
     z-index: 1;
@@ -112,34 +111,48 @@ header{
     align-items: center;
     @include layoutFunctioningCard;
 
+        &:hover{
+            box-shadow: 0px 0px 10px -3px rgb(0, 0, 0);
+        }
+
         ::before{
             content: "1";
             @include beforeElementFunctioningCard;
         }
     
 }
-    #section__functioning--card2 {
-        display: flex;
+
+#section__functioning--card2 {
+    display: flex;
     align-items: center;
-        @include layoutFunctioningCard;
+    @include layoutFunctioningCard;
+
+        &:hover{
+            box-shadow: 0px 0px 10px -3px rgb(0, 0, 0);
+        }
 
             ::before{
                 content: "2";
                 @include beforeElementFunctioningCard;
             }
         
-            }
-        #section__functioning--card3 {
-            display: flex;
-            align-items: center;
-            @include layoutFunctioningCard;
+}
 
-                ::before{
-                    content: "3";
-                    @include beforeElementFunctioningCard;
-                }
-            
+#section__functioning--card3 {
+    display: flex;
+    align-items: center;
+    @include layoutFunctioningCard;
+
+        &:hover{
+            box-shadow: 0px 0px 10px -3px rgb(0, 0, 0);
         }
+
+            ::before{
+                content: "3";
+                @include beforeElementFunctioningCard;
+        }
+            
+}
 
 .fa-mobile-alt:before {
     font-size: 20px;
@@ -162,35 +175,33 @@ header{
 // Restaurants Section
 .section__restaurants{
     background-color: #f3f3f3;
-    padding-bottom: 40px;
+    padding: 0px 20px 40px 20px ;
 
         &--title{
-            padding: 40px 0px 15px 17px;
+            padding: 40px 0px 20px 0px;
         }
 }
 
 .card{
-    width: 91%;
+    width: 100%;
     height: 220px;
-    margin: 0 auto;
-    margin-bottom: 95px;
-    margin-left: 18px;
+    margin: 0px 18px 95px auto;
     border-radius: 20px;
     background-color: #f3f3f3;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
 
-    &__image{
-        border-radius: 20px 20px 0px 0px;
-        width: 100%;
-        height: 100%;
-    }
-        &__texte{
-            position: relative;
-            margin-top:-5px;
-            padding: 16px;
-            background-color: white;
-            border-radius: 0px 0px 20px 20px;
-            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+        &__image{
+            border-radius: 20px 20px 0px 0px;
+            width: 100%;
+            height: 100%;
+        }
+            &__texte{
+                position: relative;
+                margin-top:-5px;
+                padding: 16px;
+                background-color: white;
+                border-radius: 0px 0px 20px 20px;
+                box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3); 
         }
 
             .card__text--fontSize{
@@ -200,11 +211,9 @@ header{
 
 .card--beforeNew{
     position: relative;
-    width: 91%;
+    width: 100%;
     height: 220px;
-    margin: 0 auto;
-    margin-bottom: 95px;
-    margin-left: 18px;
+    margin: 0px 18px 95px auto;
     border-radius: 20px;
     background-color: #f3f3f3;
 
@@ -261,6 +270,7 @@ header{
 
 // Footer
 .footer{
+    z-index: 10;
     display: flex;
     flex-flow: column wrap;
     gap: 8px;
@@ -279,6 +289,10 @@ header{
                 color: white;
                 font-family: $textFont;
                 font-weight: 400;
+
+                    &:hover{
+                        color: rgba(233, 233, 233, 0.94);
+                    }
         }
             .fa-utensils:before {
                 content:"\f2e7";
@@ -292,6 +306,59 @@ header{
 
 
 
-   
+// Media Queries
+@media all and (min-width : 800px){
+
+    // Section functioning
+    .section__functioning__AllCard {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+
+    .section__functioning {
+        margin: 45px auto 50px auto;
+        max-width: 1555px;
+    }
+
+    #section__functioning--card1 {
+        margin-right: 40px;
+    }
+
+    #section__functioning--card2 {
+            margin-right: 40px;
+    }
+
+// Section restaurant 
+    .section__restaurants--mediaQuerieGrid{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-auto-row: 150px;
+        grid-gap: 30px;
+    }
+    
+// Footer
+
+    .footer{
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        grid-auto-rows: auto;
+        grid-gap: 25px;
+    }
+    .footer__title--Font
+    .footer__icone--alignMediaQuerie{
+        @include alignFlexBox;
+        align-content: center;
+    }
+}
+
+@media (max-width: 1143px) {
+    .footer {
+    grid-template-columns: 1fr 2.2fr 1.8fr 1.3fr 0.5fr;
+    grid-gap: 20px;
+    }
+    }
+
+
 
    
